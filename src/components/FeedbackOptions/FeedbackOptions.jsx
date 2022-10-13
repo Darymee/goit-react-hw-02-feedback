@@ -10,39 +10,21 @@ import {
 export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
     <FeedbackBtnList>
-      <FeedbackBtnItem key={options[0]}>
-        <FeedbackBtn
-          key={options[0]}
-          type="button"
-          name={options[0]}
-          onClick={onLeaveFeedback}
-        >
-          <BsEmojiSmile />
-          {options[0]}
-        </FeedbackBtn>
-      </FeedbackBtnItem>
-      <FeedbackBtnItem key={options[1]}>
-        <FeedbackBtn
-          key={options[1]}
-          type="button"
-          name={options[1]}
-          onClick={onLeaveFeedback}
-        >
-          <BsEmojiNeutral />
-          {options[1]}
-        </FeedbackBtn>
-      </FeedbackBtnItem>
-      <FeedbackBtnItem key={options[2]}>
-        <FeedbackBtn
-          key={options[2]}
-          type="button"
-          name={options[2]}
-          onClick={onLeaveFeedback}
-        >
-          <BsEmojiFrown />
-          {options[2]}
-        </FeedbackBtn>
-      </FeedbackBtnItem>
+      {options.map(option => (
+        <FeedbackBtnItem key={option}>
+          <FeedbackBtn
+            key={option}
+            type="button"
+            name={option}
+            onClick={onLeaveFeedback}
+          >
+            {option === 'good' ? <BsEmojiSmile /> : <></>}
+            {option === 'neutral' ? <BsEmojiNeutral /> : <></>}
+            {option === 'bad' ? <BsEmojiFrown /> : <></>}
+            {option}
+          </FeedbackBtn>
+        </FeedbackBtnItem>
+      ))}
     </FeedbackBtnList>
   );
 };

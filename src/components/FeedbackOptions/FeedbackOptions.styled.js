@@ -51,3 +51,5 @@ export const FeedbackBtn = styled.button`
     margin-right: 10px;
   }
 `;
+
+export const BtnIcon = styled.svg``;
