@@ -18,9 +18,9 @@ export const FeedbackOptions = ({ options, onLeaveFeedback }) => {
             name={option}
             onClick={onLeaveFeedback}
           >
-            {option === 'good' ? <BsEmojiSmile /> : <></>}
-            {option === 'neutral' ? <BsEmojiNeutral /> : <></>}
-            {option === 'bad' ? <BsEmojiFrown /> : <></>}
+            {option === 'good' && <BsEmojiSmile />}
+            {option === 'neutral' && <BsEmojiNeutral />}
+            {option === 'bad' && <BsEmojiFrown />}
             {option}
           </FeedbackBtn>
         </FeedbackBtnItem>
