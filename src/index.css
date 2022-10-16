@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./coffee-bg.jpg);
+  background-image: url(../assets/coffee-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
